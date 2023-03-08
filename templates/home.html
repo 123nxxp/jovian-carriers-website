@@ -24,7 +24,7 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+        <h1 class="text-center mt-2 mb-4"> {{company_name}} Careers</h1>
         <img class="img-fluid" id="banner" src="https://jovian-carriers-website.maheshdange.repl.co/static/banner.jpg"
             alt="jovian-carrers">
         <h2 class="text-center mt-2 mb-4">About Jovain</h2>
@@ -36,7 +36,12 @@
             ipsum id ut placeat molestias vero, similique saepe.</p>
 
         <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-        <p>ToDo - Show the jobs here</p>
+      
+        <div>
+            {% for job in jobs %}
+            {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
 
         <div class="text-center">
             <button type="button" class="btn btn-primary btn-lg"> Contact Us</button>
